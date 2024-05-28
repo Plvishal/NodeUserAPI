@@ -1,6 +1,6 @@
 const veryfyToken = async (req, res, next) => {
   const token = req.cookies.token;
-  if (!token) return res.status(401).josn({ msg: 'Access Denied' });
+  if (!token) return res.status(401).send({ msg: 'Access Denied' });
   next();
 };
 
